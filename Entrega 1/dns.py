@@ -5,11 +5,11 @@ root = Node(".")
 
 def help():
     print("""
-        Ingrese 'create <path/to/file>' para crear un arbol a partir de la lista de dominios del archivo ingresado
+        Ingrese 'create <path/to/file>' para crear un árbol a partir de la lista de dominios del archivo ingresado
         Ingrese 'add <domain>' para agregar un nuevo dominio
-        Ingrese 'query <domain>' para consultar si existe el dominio en el arbol
-        Ingrese 'print' para imprimr el arbol
-        Ingrese 'export <path/to/file>' para crear una imagen png del arbol en el path ingresado
+        Ingrese 'query <domain>' para consultar si existe el dominio en el árbol
+        Ingrese 'print' para imprimr el árbol
+        Ingrese 'export <path/to/file>' para crear una imagen png del árbol en el path ingresado
         Ingrese 'exit' para finalizar
     """)
 
@@ -40,7 +40,7 @@ def create(path):
     """
     global root
     if not root.is_leaf:
-        opt = input("Ya existe un arbol. Desea sobreescribirlo? Y/N ")
+        opt = input("Ya existe un árbol. Desea sobreescribirlo? Y/N ")
         if opt == "N":
             return
     root = Node(".")
@@ -142,9 +142,9 @@ switcher = {
 
 while True:
     print("Ingrese help para ver las opciones")
-    line = input("Ingrese una opcion: ")
+    line = input("Ingrese una opción: ")
     op = line.split(' ')
-    fun = switcher.get(op[0], lambda: "Opcion Invalida")
+    fun = switcher.get(op[0], lambda: "Opción inválida")
     if len(op) == 2 and op[0] in ["create", "add", "query", "export"]:
         fun(op[1])
     elif len(op) == 1 and op[0] in ["help", "print", "exit"]: 
