@@ -5,12 +5,14 @@ root = Node(".")
 
 def help():
     print("""
-        Ingrese 'create <path/to/file>' para crear un árbol a partir de la lista de dominios del archivo ingresado
-        Ingrese 'add <domain>' para agregar un nuevo dominio
-        Ingrese 'query <domain>' para consultar si existe el dominio en el árbol
-        Ingrese 'print' para imprimr el árbol
-        Ingrese 'export <path/to/file>' para crear una imagen png del árbol en el path ingresado
-        Ingrese 'exit' para finalizar
+
+Ingrese 'create <path/to/file>' para crear un árbol a partir de la lista de dominios del archivo ingresado
+Ingrese 'add <domain>' para agregar un nuevo dominio
+Ingrese 'query <domain>' para consultar si existe el dominio en el árbol
+Ingrese 'print' para imprimr el árbol
+Ingrese 'export <path/to/file>' para crear una imagen png del árbol en el path ingresado
+Ingrese 'exit' para finalizar
+
     """)
 
 
@@ -139,6 +141,8 @@ switcher = {
     "export": export,
     "exit": exit
 }
+
+help()
 
 while True:
     print("Ingrese help para ver las opciones")
